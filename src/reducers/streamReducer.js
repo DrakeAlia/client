@@ -1,4 +1,4 @@
-import { act } from 'react-dom/test-utils';
+import _ from 'lodash';
 import {
     FETCH_STREAM,
     FETCH_STREAMS,
@@ -15,6 +15,9 @@ export default (state = {}, action) => {
             return  { ...state, [action.paylaod.id]: action.paylaod };
         case EDIT_STREAM:
             return { ...state, [action.payload.id]: action.payload };
+        case DELETE_STREAM:
+            return _.omit(state, action.paylaod);
+             
         default:
             return state;
     }
