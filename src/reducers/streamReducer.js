@@ -1,0 +1,21 @@
+import { act } from 'react-dom/test-utils';
+import {
+    FETCH_STREAM,
+    FETCH_STREAMS,
+    CREATE_STREAM,
+    EDIT_STREAM,
+    DELETE_STREAM
+} from '../actions/types';
+
+export default (state = {}, action) => {
+    switch (action.type) {
+        case FETCH_STREAM:
+            return { ...state, [payload.action.id]: action.payload };
+        case CREATE_STREAM:
+            return  { ...state, [action.paylaod.id]: action.paylaod };
+        case EDIT_STREAM:
+            return { ...state, [action.payload.id]: action.payload };
+        default:
+            return state;
+    }
+};
