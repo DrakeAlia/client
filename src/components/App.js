@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import StreamCreate from './streams/StreamCreate';
 import StreamDelete from './streams/StreamDelete';
 import StreamEdit from './streams/StreamEdit';
@@ -8,19 +8,19 @@ import StreamShow from './streams/StreamShow';
 import Header from './Header';
 import history from '../history';
 
-
-
 const App = () => {
 	return (
 		<div className="ui container">
 			<Router history={history}>
 				<div>
-                <Header />
-				<Route path="/" exact component={StreamList} />
-                <Route path="/streams/new" exact component={StreamCreate} />
-                <Route path="/streams/edit/:id" exact component={StreamEdit} />
-                <Route path="/streams/delete/:id" exact component={StreamDelete} />
-                <Route path="/streams/:id" exact component={StreamShow} />
+					<Header />
+					<Switch>
+						<Route path="/" exact component={StreamList} />
+						<Route path="/streams/new" exact component={StreamCreate} />
+						<Route path="/streams/edit/:id" exact component={StreamEdit} />
+						<Route path="/streams/delete/:id" exact component={StreamDelete} />
+						<Route path="/streams/:id" exact component={StreamShow} />
+					</Switch>
 				</div>
 			</Router>
 		</div>
@@ -28,8 +28,6 @@ const App = () => {
 };
 
 export default App;
-
-
 
 // =====================================================================================================================
 // Coding Exercise 14: Adding Another Route
@@ -67,7 +65,6 @@ export default App;
 // };
 
 // export { StreamList };
-
 
 // import React from 'react';
 // import { Link } from './react-router-dom';
@@ -121,7 +118,6 @@ export default App;
 // };
 
 // export { StreamList };
-
 
 // import React from 'react';
 // import { Link } from './react-router-dom';
