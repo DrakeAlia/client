@@ -31,6 +31,16 @@ const App = () => {
 export default App;
 
 // =====================================================================================================================
+// App Setup:
+// Open three terminals
+// Go to streams dir
+// (streams)client - npm start
+// (streams)api - npm start (after npm init)
+// (streams)rtmpserver - npm start (after npm init)
+// =====================================================================================================================
+
+
+// =====================================================================================================================
 // Coding Exercise 14: Adding Another Route
 
 // import React from 'react';

@@ -172,7 +172,7 @@ export default connect(mapStateToProps, { fetchStreams })(StreamList);
 
 //   renderList() {
 //     return this.props.streams.map(stream => {
-	// if (this.props.currentUserId !== stream.userId) { <<<<<	if those are not the same, then we ruturn null/early 
+	// if (this.props.currentUserId !== stream.userId) { <<<<<	if those are not the same, then we return null/early 
 		// return null; <<<<<	
 	// } <<<<<<<
 //       return (
@@ -180,7 +180,7 @@ export default connect(mapStateToProps, { fetchStreams })(StreamList);
 //           {this.renderAdmin(stream)}
 //           <i className="large middle aligned icon camera" />
 //           <div className="content">
-//             <a to={`/streams/${stream.id}`} className="header">
+//             <a to={`/streams/${stream.id}`} className="header">   
 //               {stream.title}
 //             </a>
 //             <div className="description">{stream.description}</div>
